@@ -60,6 +60,11 @@
       <artifactId>stanford-parser</artifactId>
       <version>${stanford-parser.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>${jsoup.version}</version>
+    </dependency>
   </dependencies>
 
   <build>

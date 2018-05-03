@@ -1,7 +1,7 @@
-package com.QASystem.LightQA.QuestionClassifier;
+package com.QASystem.LightQA.questionClassifier;
 
-import com.QASystem.LightQA.QuestionClassifier.patternbased.PatternMatchResultSelector;
-import com.QASystem.LightQA.QuestionClassifier.patternbased.PatternMatchStrategy;
+import com.QASystem.LightQA.questionClassifier.patternbased.PatternMatchResultSelector;
+import com.QASystem.LightQA.questionClassifier.patternbased.PatternMatchStrategy;
 import com.QASystem.LightQA.model.Question;
 
 public abstract class AbstractQuestionClassifier implements QuestionClassifier {
