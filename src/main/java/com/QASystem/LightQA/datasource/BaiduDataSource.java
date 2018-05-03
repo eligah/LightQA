@@ -141,17 +141,17 @@ public class BaiduDataSource implements DataSource {
             LOG.error("URL construction failed", e);
             return null;
         }
-        String referer = "http://www.baidu.com/";
+        String referer = "https://www.baidu.com/";
 
         for ( int i = 0; i < PAGES; i++) {
-            query = "http://www.baidu.com/";
+            query = "http://www.baidu.com/s?tn=monline_5_dg&ie=utf-8&wd=" + query+"&oq="+query+"&usm=3&f=8&bs="+query+"&rsv_bp=1&rsv_sug3=1&rsv_sug4=141&rsv_sug1=1&rsv_sug=1&pn=" + i * PAGESIZE;
             LOG.debug(query);
             List<Evidence> evidences = searchBaidu(query, referer);
             referer = query;
             if (evidences != null && evidences.size() > 0) {
                 question.addEvidences(evidences);
             } else {
-                LOG.error("Page " + (i + 1) + "cannot get any evidence");
+                LOG.error("Page " + (i + 1) + " cannot get any evidence");
                 break;
             }
         }
@@ -169,26 +169,54 @@ public class BaiduDataSource implements DataSource {
 
     private List<Evidence> searchBaidu(String url, String referer) {
         List<Evidence> evidences = new ArrayList<>();
-        Document document = Jsoup.connect(url)
-                .header("Accept", ACCEPT)
-                .header("Accept-Encoding", ENCODING)
-                .header("Accept-Language", LANGUAGE)
-                .header("Connection", CONNECTION)
-                .header("User-Agent", USER_AGENT)
-                .header("Host", HOST)
-                .header("referer",referer).get();
-        String resultCssQuery = "html > body > div > div > div > div > div";
-        Elements elements = document.select(resultCssQuery);
-        for (Element element : elements ) {
-            Elements subElements = element.select("h3 > a");
+        Document document = null;
+        try {
+            document = Jsoup.connect(url)
+                    .header("Accept", ACCEPT)
+                    .header("Accept-Encoding", ENCODING)
+                    .header("Accept-Language", LANGUAGE)
+                    .header("Connection", CONNECTION)
+                    .header("User-Agent", USER_AGENT)
+                    .header("Host", HOST)
+                    .header("referer",referer).get();
+            String resultCssQuery = "html > body > div > div > div > div > div";
+            Elements elements = document.select(resultCssQuery);
+            for (Element element : elements) {
+                Elements subElements = element.select("h3 > a");
+                if (subElements.size() != 1) {
+                    LOG.debug("Title not found");
+                    continue;
+                }
+                String title = subElements.get(0).text();
+                if (title == null || "".equals(title.trim())) {
+                    LOG.debug("Title is empty");
+                    continue;
+                }
+                subElements = element.select("div.c-abstract");
+                if (subElements.size() != 1) {
+                    LOG.debug("Summary not found");
+                    continue;
+                }
+                String snippet = subElements.get(0).text();
+                if (snippet == null || "".equals(snippet.trim())) {
+                    LOG.debug("Summary is empty");
+                    continue;
+                }
+                Evidence evidence = new Evidence();
+                evidence.setTitle(title);
+                evidence.setSnippet(snippet);
 
-            String title = subElements.get(0).text();
+                evidences.add(evidence);
+            }
+        } catch (Exception e) {
+            LOG.error("Baidu search engine error", e);
         }
         return evidences;
+
     }
 
     public static void main(String args[]) {
         Question question = new BaiduDataSource(FilesConfig.personNameQuestions).getQuestion("勃学的创始人是谁？");
-        LOG.info(question.toString());
+        // LOG.info(question.toString());
     }
 }

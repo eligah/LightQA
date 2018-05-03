@@ -1,4 +1,8 @@
 package com.QASystem.LightQA.questionClassifier.patternbased;
 
-public class PatternMatchResultSelector {
+import com.QASystem.LightQA.model.Question;
+
+public interface PatternMatchResultSelector {
+
+    public Question select(Question question, PatternMatchResult patternMatchResult);
 }

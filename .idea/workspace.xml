@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4414cf1-9549-4a0c-b16c-25f3953926d3" name="Default" comment="finish fileDataSource">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/QuestionTypeTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionPattern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionTypePatternFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/BaiduDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/BaiduDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/parser/WordParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/parser/WordParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/util/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/util/Tools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_material.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_material.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_material.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_material.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_material.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_questions.txt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/LightQA$BaiduDataSource.ic" NAME="BaiduDataSource Coverage Results" MODIFIED="1525346713036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.QASystem.LightQA.datasource.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="LightQA" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MainPartExtracter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionPattern.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionPattern.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>resource</find>
+      <find>25</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/filter/CandidateAnswerFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/filter/CandidateAnswerFilterInQuestion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/CandidateAnswer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/Question.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/parser/Wordparser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/Evidence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/CandidateAnswerCollection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/QuestionType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/util/ZipUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/QuestionClassifier/QuestionClassifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/QuestionClassifier/patternbased/PatternMatchStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/QuestionClassifier/AbstractQuestionClassifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/QuestionClassifier/patternbased/PatternBasedMultLevelQuestionClassifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/Console/demo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/Datasource.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/QASystem/LightQA/parser/WordParserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/select/CandidateAnswerSelect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/select/CommonCandidateAnserSelect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/ScoreWeight.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/score/question/EvidenceScore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/score/answer/CandidateAnswerScore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/QuestionAnsweringSystem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionTypeAnalysis/QuestionClassifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/CommonQuestionAnsweringSystem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/QuestionAnsweringSystemImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/ConsoleDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/files/FilesConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_material.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/FileDataSource.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/BaiduDataSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/QuestionTypeTransformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionStructure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/util/Tools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/parser/WordParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionTypePatternFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultSelector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionPattern.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-7" />
+    <option name="width" value="1920" />
+    <option name="height" value="1024" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="questionClassifier" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="questionClassifier" type="462c0819:PsiDirectoryNode" />
+              <item name="patternbased" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="questionTypePatterns" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.QASystem.LightQA.parser" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com.QAsystem.LightQA/files" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.PatternMatchStrategy">
+    <configuration name="BaiduDataSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.datasource.BaiduDataSource" />
+      <module name="LightQA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.QASystem.LightQA.datasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="FileDataSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.datasource.FileDataSource" />
+      <module name="LightQA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.QASystem.LightQA.datasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="PatternMatchStrategy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.questionClassifier.patternbased.PatternMatchStrategy" />
+      <module name="LightQA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.QASystem.LightQA.questionClassifier.patternbased.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="QuestionTypeTransformer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.questionClassifier.QuestionTypeTransformer" />
+      <module name="LightQA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.QASystem.LightQA.questionClassifier.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="WordParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.parser.WordParser" />
+      <module name="LightQA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.QASystem.LightQA.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Application.FileDataSource" />
+      <item itemvalue="Application.BaiduDataSource" />
+      <item itemvalue="Application.WordParser" />
+      <item itemvalue="Application.QuestionTypeTransformer" />
+      <item itemvalue="Application.PatternMatchStrategy" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PatternMatchStrategy" />
+        <item itemvalue="Application.WordParser" />
+        <item itemvalue="Application.QuestionTypeTransformer" />
+        <item itemvalue="Application.FileDataSource" />
+        <item itemvalue="Application.BaiduDataSource" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4414cf1-9549-4a0c-b16c-25f3953926d3" name="Default" comment="" />
+      <created>1524879698550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524879698550</updated>
+      <workItem from="1524879705054" duration="20487000" />
+      <workItem from="1524916777685" duration="2582000" />
+      <workItem from="1524971079188" duration="5607000" />
+      <workItem from="1525000259542" duration="1733000" />
+      <workItem from="1525049197148" duration="988000" />
+      <workItem from="1525242640984" duration="174000" />
+      <workItem from="1525242842932" duration="178000" />
+      <workItem from="1525243047267" duration="1353000" />
+      <workItem from="1525250766242" duration="26179000" />
+      <workItem from="1525347344853" duration="9299000" />
+    </task>
+    <task id="LOCAL-00001" summary="finish fileDataSource">
+      <created>1525337939938</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525337939939</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="68580000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-7" width="1920" height="1024" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32996634" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295838" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295838" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23059617" />
+      <window_info id="Designer" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916247" visible="true" weight="0.21955128" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Learn" order="2" weight="0.32959402" />
+      <window_info id="Structure" order="1" sideWeight="0.5008375" side_tool="true" weight="0.2943376" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Favorites" order="3" sideWeight="0.5008375" side_tool="true" weight="0.2943376" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.21709786" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32959402" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295838" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish fileDataSource" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish fileDataSource" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="39" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/CandidateAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/filter/CandidateAnswerFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/Evidence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="58" selection-start-line="56" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/QuestionClassifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/Console/demo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/select/CandidateAnswerSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/select/CommonCandidateAnserSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/ScoreWeight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="e#128#129#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+            <element signature="e#2189#2190#0" expanded="true" />
+            <element signature="e#2241#2242#0" expanded="true" />
+            <element signature="e#2468#2469#0" expanded="true" />
+            <element signature="e#2519#2520#0" expanded="true" />
+            <element signature="e#2739#2740#0" expanded="true" />
+            <element signature="e#2787#2788#0" expanded="true" />
+            <element signature="e#2999#3000#0" expanded="true" />
+            <element signature="e#3051#3052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/score/question/EvidenceScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionTypeAnalysis/QuestionClassifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/score/answer/CandidateAnswerScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_material.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="122" column="50" selection-start-line="122" selection-start-column="50" selection-end-line="122" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_questions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/QASystem/LightQA/parser/WordParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/ConsoleDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/files/FilesConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="109" lean-forward="true" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/QuestionAnsweringSystemImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="104" column="43" lean-forward="true" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/QuestionAnsweringSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="73" column="14" lean-forward="true" selection-start-line="73" selection-start-column="14" selection-end-line="74" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/system/CommonQuestionAnsweringSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_questions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_material.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/FileDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/BaiduDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="207" selection-start-line="207" selection-end-line="208" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/AbstractQuestionClassifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-parser/3.3.1/stanford-parser-3.3.1.jar!/edu/stanford/nlp/trees/TypedDependency.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/QuestionTypeTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_161/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="1335" selection-start-line="1335" selection-end-line="1335" />
+          <folding>
+            <element signature="e#52271#52272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_161/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="1654" selection-start-line="1654" selection-end-line="1654" />
+          <folding>
+            <element signature="e#62860#62861#0" expanded="true" />
+            <element signature="e#62916#62917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_161/src.zip!/java/lang/Package.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="328" selection-start-line="328" selection-end-line="328" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_161/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="642" selection-start-line="642" selection-end-line="642" />
+          <folding>
+            <element signature="e#32636#32637#0" expanded="true" />
+            <element signature="e#32683#32684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_161/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="1082" column="60" lean-forward="true" selection-start-line="1082" selection-start-column="60" selection-end-line="1082" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/util/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/parser/WordParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/model/QuestionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/questionTypePatterns/QuestionTypePatternsLevel3_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/questionTypePatterns/QuestionTypePatternsLevel2_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/questionTypePatterns/QuestionTypePatternsLevel1_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2489">
+          <caret line="296" column="18" lean-forward="true" selection-start-line="296" selection-start-column="18" selection-end-line="296" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionTypePatternFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding>
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternBasedMultLevelQuestionClassifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apdplat/word/1.3/word-1.3.jar!/org/apdplat/word/segmentation/Word.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apdplat/word/1.3/word-1.3.jar!/org/apdplat/word/segmentation/PartOfSpeech.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionPattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>LightQA</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.0.13</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
