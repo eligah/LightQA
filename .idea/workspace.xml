@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4414cf1-9549-4a0c-b16c-25f3953926d3" name="Default" comment="finish fileDataSource">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/QuestionTypeTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionTypePatternFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/BaiduDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/datasource/BaiduDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/parser/WordParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/parser/WordParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchResultSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/PatternMatchStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/util/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/util/Tools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_material.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/location_name_questions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_material.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/number_questions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_material.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/organization_name_questions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_material.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/person_name_questions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_material.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_material.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/QAsystem/LightQA/files/time_questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +26,8 @@
       <file leaf-file-name="MainPartExtracter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+            <state relative-caret-position="315">
+              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionPattern.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -156,6 +136,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,49 +161,6 @@
               <item name="LightQA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="questionClassifier" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="questionClassifier" type="462c0819:PsiDirectoryNode" />
-              <item name="patternbased" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LightQA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -230,7 +169,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LightQA" type="b2602c69:ProjectViewProjectNode" />
@@ -244,8 +183,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,9 +223,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PatternMatchStrategy">
-    <configuration name="BaiduDataSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.datasource.BaiduDataSource" />
+  <component name="RunManager" selected="Application.MainPartExtracter">
+    <configuration name="FileDataSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.datasource.FileDataSource" />
       <module name="LightQA" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -298,13 +235,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="FileDataSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.datasource.FileDataSource" />
+    <configuration name="MainPartExtracter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.QASystem.LightQA.questionClassifier.patternbased.MainPartExtracter" />
       <module name="LightQA" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.QASystem.LightQA.datasource.*" />
+          <option name="PATTERN" value="com.QASystem.LightQA.questionClassifier.patternbased.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -385,18 +322,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.FileDataSource" />
-      <item itemvalue="Application.BaiduDataSource" />
       <item itemvalue="Application.WordParser" />
       <item itemvalue="Application.QuestionTypeTransformer" />
       <item itemvalue="Application.PatternMatchStrategy" />
+      <item itemvalue="Application.MainPartExtracter" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainPartExtracter" />
         <item itemvalue="Application.PatternMatchStrategy" />
         <item itemvalue="Application.WordParser" />
         <item itemvalue="Application.QuestionTypeTransformer" />
         <item itemvalue="Application.FileDataSource" />
-        <item itemvalue="Application.BaiduDataSource" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +356,9 @@
       <workItem from="1525242842932" duration="178000" />
       <workItem from="1525243047267" duration="1353000" />
       <workItem from="1525250766242" duration="26179000" />
-      <workItem from="1525347344853" duration="9299000" />
+      <workItem from="1525347344853" duration="10249000" />
+      <workItem from="1525414610322" duration="2641000" />
+      <workItem from="1525483920848" duration="4947000" />
     </task>
     <task id="LOCAL-00001" summary="finish fileDataSource">
       <created>1525337939938</created>
@@ -432,7 +371,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68580000" />
+    <option name="totallyTimeSpent" value="77118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,13 +393,13 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295838" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295838" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295838" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.23059617" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916247" visible="true" weight="0.21955128" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7114094" visible="true" weight="0.25106838" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Learn" order="2" weight="0.32959402" />
-      <window_info id="Structure" order="1" sideWeight="0.5008375" side_tool="true" weight="0.2943376" />
+      <window_info id="Structure" order="1" sideWeight="0.2885906" side_tool="true" visible="true" weight="0.25106838" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Favorites" order="3" sideWeight="0.5008375" side_tool="true" weight="0.2943376" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.21709786" />
@@ -527,9 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,9 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,9 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,9 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,24 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-810">
           <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding>
-            <element signature="e#128#129#0" expanded="true" />
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2241#2242#0" expanded="true" />
-            <element signature="e#2468#2469#0" expanded="true" />
-            <element signature="e#2519#2520#0" expanded="true" />
-            <element signature="e#2739#2740#0" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2999#3000#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,9 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="104" column="43" lean-forward="true" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,9 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="73" column="14" lean-forward="true" selection-start-line="73" selection-start-column="14" selection-end-line="74" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -686,9 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -708,11 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
           <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,9 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="207" selection-start-line="207" selection-end-line="208" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -744,16 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-parser/3.3.1/stanford-parser-3.3.1.jar!/edu/stanford/nlp/trees/TypedDependency.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -761,11 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,9 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="1335" selection-start-line="1335" selection-end-line="1335" />
-          <folding>
-            <element signature="e#52271#52272#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,10 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="642" selection-start-line="642" selection-end-line="642" />
-          <folding>
-            <element signature="e#32636#32637#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,9 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
           <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -829,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -879,18 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-          <folding>
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,19 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,9 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,9 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -945,13 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,11 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-525">
           <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1330#1331#0" expanded="true" />
-            <element signature="e#1370#1371#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -971,24 +792,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-390">
           <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-parser/3.3.1/stanford-parser-3.3.1.jar!/edu/stanford/nlp/trees/TypedDependency.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/QuestionPattern.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/QASystem/LightQA/questionClassifier/patternbased/MainPartExtracter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="315">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
