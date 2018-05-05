@@ -16,11 +16,11 @@ public class PatternMatchStrategy {
         return questionTypePatternFiles.isEmpty() || questionPatterns.isEmpty();
     }
 
-    private void addQuestionPattern(QuestionPattern questionPattern) {
+    public void addQuestionPattern(QuestionPattern questionPattern) {
         questionPatterns.add(questionPattern);
     }
 
-    private void addQuestionTypePatternFile(String questionTypePatternFile) {
+    public void addQuestionTypePatternFile(String questionTypePatternFile) {
         questionTypePatternFiles.add(questionTypePatternFile);
     }
 
