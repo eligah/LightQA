@@ -3,10 +3,10 @@ package com.QASystem.LightQA.system;
 import java.util.List;
 
 import com.QASystem.LightQA.model.Question;
-import com.QASystem.LightQA.questionTypeAnalysis.QuestionClassifier;
+import com.QASystem.LightQA.questionClassifier.QuestionClassifier;
 import com.QASystem.LightQA.datasource.DataSource;
 import com.QASystem.LightQA.score.answer.CandidateAnswerScore;
-import com.QASystem.LightQA.score.question.EvidenceScore;
+import com.QASystem.LightQA.score.evidence.EvidenceScore;
 import com.QASystem.LightQA.select.CandidateAnswerSelect;
 
 public interface QuestionAnsweringSystem {

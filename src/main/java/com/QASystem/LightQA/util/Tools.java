@@ -1,10 +1,21 @@
 package com.QASystem.LightQA.util;
 
 
+import com.QASystem.LightQA.model.QuestionType;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.util.*;
 
 public class Tools {
+    private static final Logger LOG = LoggerFactory.getLogger(Tools.class);
+    private static Map<String, Integer> map = new HashMap<>();
+
     public static String getAppPath(Class cls) {
         // 检查用户传入的参数是否为空
         if (cls == null) {
@@ -82,5 +93,70 @@ public class Tools {
 //            realPath = "deep-qa";
 //        }
         return realPath;
+    }
+
+    public static Set<String> getQuestions(String file) {
+        Set<String> result = new HashSet<>();
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new InputStreamReader(Tools.class.getResourceAsStream(file), "utf-8"));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                //去除空格和？号
+                line = line.trim().replace("?", "").replace("？", "");
+                if (line.equals("") || line.startsWith("#") || line.indexOf("#") == 1 || line.length() < 3) {
+                    continue;
+                }
+                result.add(line);
+            }
+        } catch (Exception e) {
+            LOG.error("读文件错误", e);
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    LOG.error("关闭文件错误", e);
+                }
+            }
+        }
+        return result;
+    }
+
+    public static <K> List<Map.Entry<K,Integer>> sortByIntegerValue(Map<K,Integer> map) {
+        List<Map.Entry<K, Integer>> orderList = new ArrayList<>(map.entrySet());
+        Collections.sort(orderList, new Comparator<Map.Entry<K, Integer>>() {
+            @Override
+            public int compare(Map.Entry<K, Integer> o1, Map.Entry<K, Integer> o2) {
+                Integer t = o1.getValue() - o2.getValue();
+                if (t > 0 ){
+                    return 1;
+                } else if (t == 0) {
+                    return 0;
+                } else {
+                    return -1;
+                }
+            }
+        });
+        return orderList;
+    }
+
+    public static <K> List<Map.Entry<K,Double>> sortByDoubleValue(Map<K, Double> map) {
+        List<Map.Entry<K, Double>> orderList = new ArrayList<>(map.entrySet());
+        Collections.sort(orderList, new Comparator<Map.Entry<K, Double>>() {
+            @Override
+            public int compare(Map.Entry<K, Double> o1, Map.Entry<K, Double> o2) {
+                double abs = o1.getValue() - o2.getValue();
+                if (abs > 1e-10) {
+                    return 1;
+                } else if (abs < -1e-10) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        });
+        return orderList;
     }
 }
