@@ -217,6 +217,6 @@ public class BaiduDataSource implements DataSource {
 
     public static void main(String args[]) {
         Question question = new BaiduDataSource(FilesConfig.personNameQuestions).getQuestion("勃学的创始人是谁？");
-        // LOG.info(question.toString());
+         LOG.info(question.toString());
     }
 }

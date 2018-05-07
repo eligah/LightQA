@@ -1,7 +1,11 @@
 package com.QASystem.LightQA.util;
 
 
+import com.QASystem.LightQA.model.Evidence;
+import com.QASystem.LightQA.model.Question;
 import com.QASystem.LightQA.model.QuestionType;
+import com.QASystem.LightQA.parser.WordParser;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
@@ -11,10 +15,13 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Tools {
     private static final Logger LOG = LoggerFactory.getLogger(Tools.class);
     private static Map<String, Integer> map = new HashMap<>();
+
 
     public static String getAppPath(Class cls) {
         // 检查用户传入的参数是否为空
@@ -158,5 +165,72 @@ public class Tools {
             }
         });
         return orderList;
+    }
+
+    public static int getIDF(String term) {
+        Integer idf = map.get(term);
+        if (idf == null) {
+            return 0;
+        }
+        LOG.info("idf " + term + ":" + idf);
+        return idf;
+    }
+
+    public static List<Map.Entry<String, Integer>> initIDF(List<Question> questions) {
+        map = new HashMap<>();
+        for (Question question : questions) {
+            List<Evidence> evidences = question.getEvidences();
+            for (Evidence evidence : evidences) {
+                Set<String> set = new HashSet<>();
+                List<Word> words = WordParser.parse(evidence.getTitle() + evidence.getSnippet());
+                for (Word word : words) {
+                    set.add(word.getText());
+                }
+                for (String item :set) {
+                    Integer doc = map.get(item);
+                    if(doc == null) {
+                        doc =1;
+                    }else {
+                        doc++;
+                    }
+                    map.put(item,doc);
+                }
+            }
+        }
+        List<Map.Entry<String, Integer>> list = Tools.sortByIntegerValue(map);
+        for (Map.Entry<String, Integer> entry : list) {
+            LOG.debug(entry.getKey() + " " + entry.getValue());
+        }
+        return list;
+    }
+
+    public static int countsForbigram(String text, String pattern) {
+        int count = 0;
+        int index = -1;
+        while(true) {
+            index = text.indexOf(pattern, index + 1);
+            if (index > -1) {
+                count++;
+            } else {
+                break;
+            }
+        }
+        return count;
+    }
+
+    public static int countsForSkipbigram(String text, String pattern) {
+        int count = 0;
+        Pattern p = Pattern.compile(pattern);
+        Matcher matcher = p.matcher(text);
+        while (matcher.find()) {
+            LOG.debug("Regular express match: " + matcher.group());
+            count++;
+        }
+        return count;
+    }
+
+    public static List<Word> getWords(String s) {
+        List<Word> words = WordParser.parse(s);
+        return words;
     }
 }

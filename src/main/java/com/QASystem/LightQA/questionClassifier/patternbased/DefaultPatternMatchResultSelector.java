@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//选择最多的匹配种类
 public class DefaultPatternMatchResultSelector implements PatternMatchResultSelector {
 
     private static final Logger LOG = LoggerFactory.getLogger(DefaultPatternMatchResultSelector.class);

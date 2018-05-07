@@ -1,7 +1,5 @@
 package com.QASystem.LightQA.system;
 
-
-
 import com.QASystem.LightQA.datasource.DataSource;
 import com.QASystem.LightQA.model.CandidateAnswer;
 import com.QASystem.LightQA.model.CandidateAnswerCollection;
@@ -122,7 +120,7 @@ public class QuestionAnsweringSystemImpl implements QuestionAnsweringSystem{
             }
             int i = 1;
             for (Evidence evidence: question.getEvidences()) {
-                LOG.debug("Start to process evidence.");
+                LOG.debug("Start to process evidence " + (i++));
                 evidenceScore.score(question,evidence);
 
                 LOG.debug("Evidence detail.");
@@ -147,8 +145,8 @@ public class QuestionAnsweringSystemImpl implements QuestionAnsweringSystem{
                 }
                 LOG.debug("");
             }
-            LOG.info("");
-            LOG.info("");
+            LOG.info("************************************");
+            LOG.info("************************************");
             LOG.info("Question: " + question.getQuestion());
             LOG.info("Candidate Answer: ");
             for (CandidateAnswer candidateAnswer : question.getAllCandidateAnswer()){
