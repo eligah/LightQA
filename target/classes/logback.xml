@@ -38,10 +38,10 @@
     <!--<logger name="org.apdplat.qa.score.answer.TextualAlignmentCandidateAnswerScore" level="INFO"/>-->
     <!--<logger name="org.apache.commons" level="ERROR"/>-->
     <!--<logger name="httpclient" level="ERROR"/>-->
-    <logger name="org.apdplat.word" level="ERROR">
-    </logger>
+    <logger name="org.apdplat.word" level="INFO"/>
 
-    <root level="DEBUG">
+
+    <root level="INFO">
         <appender-ref ref="logfile"/>
         <appender-ref ref="stdout"/>
     </root>

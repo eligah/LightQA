@@ -1,5 +1,6 @@
 package com.QASystem.LightQA.system;
 
+import com.QASystem.LightQA.datasource.BaiduDataSource;
 import com.QASystem.LightQA.datasource.DataSource;
 import com.QASystem.LightQA.datasource.FileDataSource;
 import com.QASystem.LightQA.files.FilesConfig;
@@ -40,14 +41,15 @@ public class CommonQuestionAnsweringSystem extends QuestionAnsweringSystemImpl {
         super.setQuestionClassifier(questionClassifier);
 
         //设置数据源
-        List<String> files = new ArrayList<>();
-        files.add(FilesConfig.personNameMaterial);
-        files.add(FilesConfig.locationNameMaterial);
-        files.add(FilesConfig.organizationNameMaterial);
-        files.add(FilesConfig.numberMaterial);
-        files.add(FilesConfig.timeMaterial);
-
-        DataSource dataSource = new FileDataSource(files);
+//        List<String> files = new ArrayList<>();
+//        files.add(FilesConfig.personNameMaterial);
+//        files.add(FilesConfig.locationNameMaterial);
+//        files.add(FilesConfig.organizationNameMaterial);
+//        files.add(FilesConfig.numberMaterial);
+//        files.add(FilesConfig.timeMaterial);
+//
+//        DataSource dataSource = new FileDataSource(files);
+        DataSource dataSource = new BaiduDataSource();
         super.setDataSource(dataSource);
 
         //证据评分组件组合
@@ -105,6 +107,6 @@ public class CommonQuestionAnsweringSystem extends QuestionAnsweringSystemImpl {
     }
     public static void main(String[] args) {
         QuestionAnsweringSystem questionAnsweringSystem = new CommonQuestionAnsweringSystem();
-        questionAnsweringSystem.answerQuestions();
+        questionAnsweringSystem.answerQuestion("勃学的创始人是谁?");
     }
 }

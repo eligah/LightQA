@@ -21,7 +21,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
     private static final Map<String, String> questionPatternCache = new HashMap<>();
     private static final Map<String, QuestionTypePattern> questionTypePatternCache = new HashMap<>();
 
-    private static final MainPartExtracter mainPartExtracter = new MainPartExtracter();
+    private static final AbstractMainPartExtracter mainPartExtracter = new MainPartExtracterEX();
     private final List<QuestionTypePatternFile> questionTypePatternFiles = new ArrayList<>();
 
     public PatternBasedMultiLevelQuestionClassifier(final PatternMatchStrategy patternMatchStrategy, PatternMatchResultSelector patternMatchResultSelector) {
@@ -38,6 +38,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
                 public boolean accept(File dir, String name) {
                     if (patternMatchStrategy.enableQuestionTypePatternFile(name)){
                         LOG.info("Enable the pattern file: " + name);
+                        return true;
                     } else {
                         LOG.info("Disable the pattern file: " + name);
                     }
@@ -71,7 +72,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
         LOG.info("pattern matching for question: " + questionStr);
         PatternMatchStrategy patternMatchStrategy = getPatternMatchStrategy();
         if (patternMatchStrategy == null) {
-            LOG.error("No spcific pattern match strategy.");
+            LOG.error("No specific pattern match strategy.");
             return question;
         }
         List<String> questionPatterns = extraQuestionPatternFromQuestion(questionStr, patternMatchStrategy);
@@ -81,7 +82,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
         }
         PatternMatchResult patternMatchResult = new PatternMatchResult();
         for (QuestionTypePatternFile qtpfile : questionTypePatternFiles) {
-            String questionTypePatternFile = "/questionTypePatterns" + qtpfile.getFile();
+            String questionTypePatternFile = "/questionTypePatterns/" + qtpfile.getFile();
             LOG.info("questionTypePatternFile: " + questionTypePatternFile);
             QuestionTypePattern questionTypePattern = extractQuestionTypePattern(questionTypePatternFile);
             if (questionTypePattern != null) {
@@ -165,6 +166,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
         }
         return patternMatchResultItems;
     }
+
     private QuestionTypePattern extractQuestionTypePattern(String questionTypePatternFile) {
         QuestionTypePattern value = questionTypePatternCache.get(questionTypePatternFile);
         if(value != null) {
@@ -280,7 +282,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
             if(mainPart == null) {
                 QuestionStructure questionStructure = mainPartExtracter.getMainPart(question);
                 if(questionStructure != null) {
-                    mainPart = questionStructure.getMainPart().toString();
+                    mainPart = questionStructure.getMainPart();
                     questionPatternCache.put(question + "mainPart", mainPart);
                 }
             }
@@ -339,15 +341,15 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
         patternMatchStrategy.addQuestionPattern(QuestionPattern.Natures);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartPattern);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartNaturePattern);
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_true.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_true.txt");
+//        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_true.txt");
+//        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_true.txt");
         patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_true.txt");
 
         PatternMatchResultSelector patternMatchResultSelector = new DefaultPatternMatchResultSelector();
 
         QuestionClassifier questionClassifier = new PatternBasedMultiLevelQuestionClassifier(patternMatchStrategy, patternMatchResultSelector);
 
-        Question question = questionClassifier.classify("Who is the author of apdplat?");
+        Question question = questionClassifier.classify("勃学的创始人是谁?");
 
         if (question != null) {
             LOG.info(question.getQuestion() + "type is: " + question.getQuestionType() + " candidate question type: " + question.getCandidateQuestionTypes());

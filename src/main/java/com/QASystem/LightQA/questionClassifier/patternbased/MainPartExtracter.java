@@ -1,16 +1,28 @@
 package com.QASystem.LightQA.questionClassifier.patternbased;
 
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.QASystem.LightQA.parser.WordParser;
 
-import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
-import edu.stanford.nlp.trees.*;
-import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguagePack;
-import org.apdplat.word.segmentation.Word;
-import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.apdplat.word.segmentation.Word;
 
-import java.util.*;
 
+import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
+import edu.stanford.nlp.trees.GrammaticalStructure;
+import edu.stanford.nlp.trees.GrammaticalStructureFactory;
+import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TreebankLanguagePack;
+import edu.stanford.nlp.trees.TypedDependency;
+import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguagePack;
+
+//TODO fix mainPart same extraction
 public class MainPartExtracter implements AbstractMainPartExtracter{
     private static final Logger LOG = LoggerFactory.getLogger(MainPartExtracter.class);
     private static final LexicalizedParser LP;
@@ -29,6 +41,7 @@ public class MainPartExtracter implements AbstractMainPartExtracter{
     public QuestionStructure getMainPart(String question, String questionWords) {
         List<edu.stanford.nlp.ling.Word> words = new ArrayList<>();
         String[] qw = questionWords.split("\\s+");
+
         for (String item : qw) {
             item = item.trim();
             if (item.equals("")){
@@ -204,7 +217,7 @@ public class MainPartExtracter implements AbstractMainPartExtracter{
 
         List<Word> words = WordParser.parse(question);
         for (Word word: words) {
-            map.put(word.getText(), word.getPartOfSpeech().getPos()); // TODO getPartOfSpeech().getPos meaning.
+            map.put(word.getText(), word.getPartOfSpeech().getPos());
         }
         StringBuilder patterns = new StringBuilder();
         String[] items = mainPart.split(" ");
@@ -214,6 +227,22 @@ public class MainPartExtracter implements AbstractMainPartExtracter{
                 patterns.append("/");
             }
             patterns.append(map.get(item));
+        }
+        return patterns.toString().trim();
+    }
+
+    @Override
+    public String getQuestionMainPartPattern(String question, String mainPart) {
+        Map<String, String> map = new HashMap<>();
+        //分词
+        List<Word> words = WordParser.parse(question);
+        for (Word word : words) {
+            map.put(word.getText(), word.getPartOfSpeech().getPos());
+        }
+        StringBuilder patterns = new StringBuilder();
+        String[] items = mainPart.split(" ");
+        for (String item : items) {
+            patterns.append(item).append("/").append(map.get(item)).append(" ");
         }
         return patterns.toString().trim();
     }

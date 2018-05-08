@@ -14,4 +14,6 @@ public interface AbstractMainPartExtracter {
 
     public String getQuestionMainPartNaturePattern(String question, String mainPart);
 
+    public String getQuestionMainPartPattern(String question, String mainPart);
+
 }

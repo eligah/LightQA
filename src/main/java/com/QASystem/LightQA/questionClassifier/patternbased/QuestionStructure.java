@@ -40,11 +40,13 @@ public class QuestionStructure {
     public String getMainPart() {
         if(mainPart!=null) {
             return mainPart.toString();
-        } else if (!mainPart.getResult().equals("")) {
-            return mainPart.getResult();
         } else {
-            LOG.debug("MainPart have not extracted");
-            return "";
+            //top的优先级高于root
+            if (mainPartForTop == null) {
+                //如果没有top的值，则返回root的值
+                return mainPartForRoot;
+            }
+            return mainPartForTop;
         }
     }
 

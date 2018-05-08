@@ -30,7 +30,7 @@ public class ValidateClassifier {
         patternMatchStrategy.addQuestionPattern(QuestionPattern.Natures);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartPattern);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartNaturePattern);
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_true.txt");
+//        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_true.txt");
         patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_true.txt");
         patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_true.txt");
 
@@ -50,9 +50,9 @@ public class ValidateClassifier {
             if (question == null) {
                 no.add(rightQuestionType + " cannot identify: " + q);
             } else if (question.getQuestionType() != rightQuestionType) {
-                wrong.add(rightQuestionType + "wrong : " + q + "type: " + question.getQuestionType().name() + " candidate types: " + question.getCandidateQuestionTypes());
+                wrong.add(rightQuestionType + " wrong : " + q + " type: " + question.getQuestionType().name() + " candidate types: " + question.getCandidateQuestionTypes());
             } else if (question.getQuestionType() == rightQuestionType) {
-                right.add(rightQuestionType + "right classification: " + q + " type: " + question.getQuestionType().name());
+                right.add(rightQuestionType + " right classification: " + q + " type: " + question.getQuestionType().name());
             } else {
                 unknown.add(rightQuestionType + " unknown situation for question: " + q);
             }

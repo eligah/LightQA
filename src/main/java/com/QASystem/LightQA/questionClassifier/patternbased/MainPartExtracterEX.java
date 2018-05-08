@@ -1,14 +1,17 @@
 package com.QASystem.LightQA.questionClassifier.patternbased;
 
-import com.QASystem.LightQA.parser.WordParser;
-import edu.stanford.nlp.ling.Word;
-import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
-import edu.stanford.nlp.trees.*;
-import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguagePack;
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-
 import java.util.*;
+
+import com.QASystem.LightQA.parser.WordParser;
+import edu.stanford.nlp.trees.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.apdplat.word.segmentation.Word;
+
+
+import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
+import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguagePack;
+
 
 public class MainPartExtracterEX implements AbstractMainPartExtracter{
     private static Logger LOG = LoggerFactory.getLogger(MainPartExtracterEX.class);
@@ -39,7 +42,7 @@ public class MainPartExtracterEX implements AbstractMainPartExtracter{
     }
 
     @Override
-    public QuestionStructure getMainPart(String question, List<Word> words) {
+    public QuestionStructure getMainPart(String question, List<edu.stanford.nlp.ling.Word> words) {
         QuestionStructure questionStructure = new QuestionStructure();
         questionStructure.setQuestion(question);
 
@@ -106,7 +109,7 @@ public class MainPartExtracterEX implements AbstractMainPartExtracter{
     }
 
 
-    //TODO figure out.
+    //TODO figure out the reason
     private void combineNN(Collection<TypedDependency> tdls, TreeGraphNode target) {
         if (target  == null) return;
         for (TypedDependency td : tdls) {
@@ -179,7 +182,38 @@ public class MainPartExtracterEX implements AbstractMainPartExtracter{
 
     @Override
     public String getQuestionMainPartNaturePattern(String question, String mainPart) {
-        return null;
+        Map<String, String> map = new HashMap<>();
+        //分词
+        List<Word> words = WordParser.parse(question);
+        for (Word word : words) {
+            map.put(word.getText(), word.getPartOfSpeech().getPos());
+        }
+        StringBuilder patterns = new StringBuilder();
+        String[] items = mainPart.split(" ");
+        int i = 0;
+        for (String item : items) {
+            if ((i++) > 0) {
+                patterns.append("/");
+            }
+            patterns.append(map.get(item));
+        }
+        return patterns.toString().trim();
+    }
+
+    @Override
+    public String getQuestionMainPartPattern(String question, String mainPart) {
+        Map<String, String> map = new HashMap<>();
+        //分词
+        List<Word> words = WordParser.parse(question);
+        for (Word word : words) {
+            map.put(word.getText(), word.getPartOfSpeech().getPos());
+        }
+        StringBuilder patterns = new StringBuilder();
+        String[] items = mainPart.split(" ");
+        for (String item : items) {
+            patterns.append(item).append("/").append(map.get(item)).append(" ");
+        }
+        return patterns.toString().trim();
     }
 
     public static void main(String[] args) {
