@@ -280,7 +280,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
             if(mainPart == null) {
                 QuestionStructure questionStructure = mainPartExtracter.getMainPart(question);
                 if(questionStructure != null) {
-                    mainPart = questionStructure.getMainPart();
+                    mainPart = questionStructure.getMainPart().toString();
                     questionPatternCache.put(question + "mainPart", mainPart);
                 }
             }

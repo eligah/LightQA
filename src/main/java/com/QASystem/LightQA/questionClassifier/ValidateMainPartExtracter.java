@@ -2,6 +2,9 @@ package com.QASystem.LightQA.questionClassifier;
 
 import com.QASystem.LightQA.model.Question;
 import com.QASystem.LightQA.questionClassifier.patternbased.MainPartExtracter;
+
+import com.QASystem.LightQA.questionClassifier.patternbased.MainPartExtracterEX;
+import com.QASystem.LightQA.questionClassifier.patternbased.AbstractMainPartExtracter;
 import com.QASystem.LightQA.questionClassifier.patternbased.QuestionStructure;
 import com.QASystem.LightQA.util.Tools;
 import org.slf4j.Logger;
@@ -12,109 +15,85 @@ import java.util.*;
 public class ValidateMainPartExtracter {
     private static final Logger LOG = LoggerFactory.getLogger(ValidateMainPartExtracter.class);
 
-//    public static void validate() {
-//        //TODO finsh validate mainpart.
-//        MainPartExtracter mainPartExtracter = new MainPartExtracter();
-//        String file = "/com/QAsystem/questiontypeanalysis/AllTestQuestionWithMainPart.txt";
-//        Set<String> questionStr = Tools.getQuestions(file);
-//        LOG.info("Load" + questionStr.size() + " questions：" + file);
-//        List<QuestionStructure> questions = parseQuestions(questionStr);
-//        LOG.info("Add " + questionStr.size() + " items.");
-//        LOG.info("Parse " + questions.size() + " question successfully.");
-//
-//        //提取失败
-//        List<QuestionStructure> no = new ArrayList<>();
-//        //提取成功，未标注
-//        List<QuestionStructure> yes = new ArrayList<>();
-//        //提取成功，标注不一致
-//        Map<QuestionStructure, String> wrong = new HashMap<>();
-//        //提取成功，标注一致
-//        List<QuestionStructure> right = new ArrayList<>();
-//
-//        for (QuestionStructure question : questions) {
-//            QuestionStructure questionStructure = mainPartExtracter.getMainPart(question.getQuestion());
-//            if (questionStructure == null || questionStructure.getMainPart() == null) {
-//                //不能提取
-//                no.add(questionStructure);
-//            } else {
-//                if (question.getMainPart() != null) {
-//                    if (questionStructure.getMainPart().equals(question.getMainPart())) {
-//                        right.add(questionStructure);
-//                    } else {
-//                        String errorInfo;
-//                        if (question.getMainPart())
-//                    }
-//                }
-//            }
-//        }
-//        //两种提取模式结果一致的情况
-//        int perfect = 0;
-//        //不能提取
-//        //能提取主谓宾但未标注
-//        //能提取主谓宾但和标注不一致
-//        //能提取主谓宾且和标注一致
-//        LOG.info("");
-//        LOG.info("能提取主谓宾但未标注（" + yes.size() + "）：");
-//        int b = 1;
-//        for (QuestionStructure item : yes) {
-//            if (item.perfect()) {
-//                perfect++;
-//            }
-//            LOG.info((b++) + " " + item.getQuestion() + " : " + item.getMainPart());
-//            for (String den : item.getDependencies()) {
-//                LOG.info("\t" + den);
-//            }
-//        }
-//        LOG.info("");
-//        LOG.info("不能提取主谓宾数（" + no.size() + "）：");
-//        int a = 1;
-//        for (QuestionStructure item : no) {
-//            LOG.info((a++) + " " + item.getQuestion());
-//            for (String den : item.getDependencies()) {
-//                LOG.info("\t" + den);
-//            }
-//        }
-//        LOG.info("");
-//        LOG.info("能提取主谓宾但和标注【不一致】数（" + wrong.size() + "）：");
-//        int c = 1;
-//        for (QuestionStructure item : wrong.keySet()) {
-//            if (item.perfect()) {
-//                perfect++;
-//            }
-//            LOG.info((c++) + " " + item.getQuestion() + " " + item.getMainPart());
-//            for (String den : item.getDependencies()) {
-//                LOG.info("\t" + den);
-//            }
-//            LOG.info("\t" + wrong.get(item));
-//        }
-//        LOG.info("");
-//        LOG.info("能提取主谓宾且和标注【一致】数（" + right.size() + "）：");
-//        int d = 1;
-//        for (QuestionStructure item : right) {
-//            if (item.perfect()) {
-//                perfect++;
-//            }
-//            LOG.info((d++) + " " + item.getQuestion() + " : " + item.getMainPart());
-//            for (String den : item.getDependencies()) {
-//                LOG.info("\t" + den);
-//            }
-//        }
-//        int total = right.size() + wrong.size() + yes.size() + no.size();
-//        LOG.info("主谓宾提取统计");
-//        LOG.info("两种提取模式结果一致数: " + perfect);
-//        LOG.info("两种提取模式结果一致率: " + (double) perfect / total * 100 + "%");
-//        LOG.info("问题总数: " + total);
-//        LOG.info("识别数: " + (total - no.size()));
-//        LOG.info("识别率: " + (double) (total - no.size()) / total * 100 + "%");
-//        LOG.info("未识别数: " + no.size());
-//        LOG.info("未识别率: " + (double) no.size() / total * 100 + "%");
-//        LOG.info("人工标注数: " + human);
-//        LOG.info("人工标注率: " + (double) human / total * 100 + "%");
-//        LOG.info("识别准确数(人工标注): " + right.size());
-//        LOG.info("识别准确率(人工标注): " + (double) right.size() / human * 100 + "%");
-//        LOG.info("识别不准确数(人工标注): " + wrong.size());
-//        LOG.info("识别不准确率(人工标注): " + (double) wrong.size() / human * 100 + "%");
-//    }
+    public static void validate() {
+        AbstractMainPartExtracter mainPartExtracter = new MainPartExtracterEX();
+        String file = "/com/QAsystem/LightQA/questiontypeanalysis/PartOfTestQuestionWithMainPart.txt";
+        Set<String> questionStr = Tools.getQuestions(file);
+        LOG.info("Load " + questionStr.size() + " questions：" + file);
+        List<QuestionStructure> questions = parseQuestions(questionStr);
+        LOG.info("Add " + questionStr.size() + " items.");
+        LOG.info("Parse " + questions.size() + " question successfully.");
+
+        //提取失败
+        List<QuestionStructure> no = new ArrayList<>();
+        //提取成功，未标注
+        List<QuestionStructure> yes = new ArrayList<>();
+        //提取成功，标注不一致
+        Map<QuestionStructure, String> wrong = new HashMap<>();
+        //提取成功，标注一致
+        List<QuestionStructure> right = new ArrayList<>();
+
+        int humanTags = 0;
+        for (QuestionStructure question : questions) {
+            QuestionStructure questionStructure = mainPartExtracter.getMainPart(question.getQuestion());
+            if (questionStructure == null || questionStructure.getMainPart() == null) {
+                //不能提取
+                no.add(questionStructure);
+            } else {
+                //如果文件中问题有标注
+                if (question.getMainPart() != null) {
+                    humanTags++;
+                    //判断提取是否正确
+                    if (questionStructure.getMainPart().equals(question.getMainPart())) {
+                        right.add(questionStructure);
+                    } else {
+                        String errorInfo;
+                        String[] attrs1 = questionStructure.getMainPart().split("\\s+");
+                        if( attrs1 == null || attrs1.length == 1  ) {
+                            errorInfo = "SVO extraction error.";
+                            wrong.put(questionStructure, errorInfo);
+                            continue;
+                        }
+
+                        String[] attrs2 = question.getMainPart().split("\\s+");
+                        if (attrs2 == null || attrs2.length == 1){
+                            errorInfo = "SVO tagging error.";
+                            wrong.put(questionStructure, errorInfo);
+                            continue;
+                        }
+                        //TODO output different msg of SVO matching result
+                        StringBuilder str = new StringBuilder();
+//                        if(!attrs1[0].trim().equals(attrs2[0].trim())) {
+//                            str.append("Subject extraction error ");
+//                        }
+//                        if(!attrs1[1].trim().equals(attrs2[1].trim())) {
+//                            str.append(" predicate extraction error ");
+//                        }
+//                        if(!attrs1[2].trim().equals(attrs2[2].trim())) {
+//                            str.append(" Object extraction error ");
+//                        }
+//                        str.append(" Right SVO: ").append(question.getMainPart());
+                        wrong.put(questionStructure, str.toString().trim());
+                    }
+                } else {
+                    // 提取未标注
+                    yes.add(questionStructure);
+                }
+            }
+        }
+
+        int total = right.size() + wrong.size() + yes.size() + no.size();
+        LOG.info("SVO extraction statistic: ");
+        LOG.info("Question set size: " + total);
+        LOG.info("Indentify : " + (total - no.size()));
+        LOG.info("Indentify rate: " + (double) (total - no.size()) / total * 100 + "%");
+        LOG.info("Human tagging set size: " + humanTags);
+        LOG.info("Human tagging rate: " + (double) humanTags / total * 100 + "%");
+        LOG.info("Recognition correct number : " + right.size());
+        LOG.info("Recognition correct rate: " + (double) right.size() / humanTags * 100 + "%");
+        LOG.info("Recognition error number: " + wrong.size());
+        LOG.info("Recognition error rate: " + (double) wrong.size() / humanTags * 100 + "%");
+    }
 
 
 
@@ -147,6 +126,7 @@ public class ValidateMainPartExtracter {
                        QuestionStructure qs =new QuestionStructure();
                        qs.setQuestion(q);
                        qs.setMainPart(p[0].trim() + " " + p[1].trim() +" "+ p[2].trim());
+                       result.add(qs);
                    }
                 }
             } else{
@@ -157,6 +137,6 @@ public class ValidateMainPartExtracter {
     }
 
     public static void main(String[] args) {
-       // validate();
+       validate();
     }
 }

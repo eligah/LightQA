@@ -3,17 +3,21 @@ package com.QASystem.LightQA.questionClassifier.patternbased;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TypedDependency;
 
+import com.QASystem.LightQA.questionClassifier.patternbased.MainPart;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public class QuestionStructure {
+    private static final Logger LOG = LoggerFactory.getLogger(QuestionStructure.class);
     private String question;
-    private String mainPart;
+    private MainPart mainPart;
     private String mainPartForTop = null;
     private String mainPartForRoot = null;
 
-    private List<String> dependencies = new ArrayList<>();
     private Collection<TypedDependency> tdls;
     private Tree tree;
 
@@ -23,8 +27,8 @@ public class QuestionStructure {
         } else {
             return false;
         }
-
     }
+
     public String getQuestion() {
         return question;
     }
@@ -34,27 +38,23 @@ public class QuestionStructure {
     }
 
     public String getMainPart() {
-        if (mainPart != null) {
-            return mainPart;
-        } else if (mainPartForTop != null){
-            return mainPartForTop;
-        }
-        else {
-            return mainPartForRoot;
+        if(mainPart!=null) {
+            return mainPart.toString();
+        } else if (!mainPart.getResult().equals("")) {
+            return mainPart.getResult();
+        } else {
+            LOG.debug("MainPart have not extracted");
+            return "";
         }
     }
 
-    public void setMainPart(String mainPart) {
+    public void setMainPart(String mp) {
+        this.mainPart = new MainPart();
+        this.mainPart.setResult(mp);
+    }
+
+    public void setMainPart(MainPart mainPart) {
         this.mainPart = mainPart;
-    }
-
-
-    public List<String> getDependencies() {
-        return dependencies;
-    }
-
-    public void setDependencies(List<String> dependencies) {
-        this.dependencies = dependencies;
     }
 
     public Collection<TypedDependency> getTdls() {

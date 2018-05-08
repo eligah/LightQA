@@ -30,7 +30,7 @@ public class BaiduDataSource implements DataSource {
     private static final String HOST = "www.baidu.com";
 
 
-    private  static final int PAGES = 1;
+    private  static final int PAGES = 2;
     private static final int PAGESIZE = 10;
 
     private static final boolean SUMMARY = true;
@@ -142,12 +142,13 @@ public class BaiduDataSource implements DataSource {
             return null;
         }
         String referer = "https://www.baidu.com/";
-
+        String queryTemp = query;
         for ( int i = 0; i < PAGES; i++) {
             query = "http://www.baidu.com/s?tn=monline_5_dg&ie=utf-8&wd=" + query+"&oq="+query+"&usm=3&f=8&bs="+query+"&rsv_bp=1&rsv_sug3=1&rsv_sug4=141&rsv_sug1=1&rsv_sug=1&pn=" + i * PAGESIZE;
             LOG.debug(query);
             List<Evidence> evidences = searchBaidu(query, referer);
             referer = query;
+            query = queryTemp;
             if (evidences != null && evidences.size() > 0) {
                 question.addEvidences(evidences);
             } else {
@@ -155,7 +156,6 @@ public class BaiduDataSource implements DataSource {
                 break;
             }
         }
-
         LOG.info("Question: " + question.getQuestion() + "Searching result (evidence): " + question.getEvidences().size());
         if (question.getEvidences().isEmpty()) {
             return null;
@@ -216,7 +216,7 @@ public class BaiduDataSource implements DataSource {
     }
 
     public static void main(String args[]) {
-        Question question = new BaiduDataSource(FilesConfig.personNameQuestions).getQuestion("勃学的创始人是谁？");
+        Question question = new BaiduDataSource(FilesConfig.personNameQuestions).getQuestion("中华人民共和国建立时间是哪一年？");
          LOG.info(question.toString());
     }
 }

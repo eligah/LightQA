@@ -46,7 +46,7 @@ public class FileDataSource implements DataSource{
     public Question getAndAnswerQuestion(String questionStr, QuestionAnsweringSystem questionAnsweringSystem) {
         for (Question question: getQuestions()) {
             String q = question.getQuestion().trim().replace("?", "").replace("？", "");
-            questionStr.trim().replace("?", "").replace("？", "");
+            questionStr = questionStr.trim().replace("?", "").replace("？", "");
             if (q.equals(questionStr)) {
                 if (questionAnsweringSystem != null) {
                     questionAnsweringSystem.answerQuestion(question);
@@ -60,7 +60,6 @@ public class FileDataSource implements DataSource{
     @Override
     public List<Question> getAndAnswerQuestions(QuestionAnsweringSystem questionAnsweringSystem) {
 
-        // TODO 问题不能全部载入
         List<Question> questions = new ArrayList<>();
 
         for (String file : files) {
@@ -73,7 +72,7 @@ public class FileDataSource implements DataSource{
                     if (line.trim().equals("") || line.trim().startsWith("#") || line.trim().indexOf("#") == 1 || line.length() <3) {
                         line = reader.readLine();
                     }
-                    if ( line.trim().startsWith("?") || line.trim().indexOf("？") == 1) {
+                    if ( line.trim().startsWith("?") || line.trim().indexOf("?") == 1) {
                         if (questionAnsweringSystem != null && question != null){
                             questionAnsweringSystem.answerQuestion(question);
                         }
@@ -127,7 +126,7 @@ public class FileDataSource implements DataSource{
             } catch (FileNotFoundException e) {
                 LOG.error("Cannot find the file", e);
             } catch (UnsupportedEncodingException e){
-                LOG.error("Charset error", e);
+                LOG.error("Encording error", e);
             } catch (IOException e) {
                 LOG.error("IO error", e);
             } finally {
@@ -149,9 +148,9 @@ public class FileDataSource implements DataSource{
         for (Question question : questions) {
             LOG.info(question.toString());
         }
-        Question question = dataSource.getQuestion("APDPlat的发起人是谁？");
-        QuestionAnsweringSystem questionAnsweringSystem = new CommonQuestionAnsweringSystem();
-        questionAnsweringSystem.answerQuestion(question);
+        Question question = dataSource.getQuestion("1990年中国共产党的总书记是谁?");
+//        QuestionAnsweringSystem questionAnsweringSystem = new CommonQuestionAnsweringSystem();
+//        questionAnsweringSystem.answerQuestion(question);
     }
 
 }

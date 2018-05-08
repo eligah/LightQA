@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 
 import java.util.*;
 
-public class MainPartExtracter {
+public class MainPartExtracter implements AbstractMainPartExtracter{
     private static final Logger LOG = LoggerFactory.getLogger(MainPartExtracter.class);
     private static final LexicalizedParser LP;
     private static final GrammaticalStructureFactory GSF;
@@ -25,6 +25,7 @@ public class MainPartExtracter {
         GSF = tlp.grammaticalStructureFactory();
     }
 
+    @Override
     public QuestionStructure getMainPart(String question, String questionWords) {
         List<edu.stanford.nlp.ling.Word> words = new ArrayList<>();
         String[] qw = questionWords.split("\\s+");
@@ -38,19 +39,21 @@ public class MainPartExtracter {
         return getMainPart(question, words);
     }
 
+    @Override
     public QuestionStructure getMainPart(String question, List<edu.stanford.nlp.ling.Word> words) {
         QuestionStructure questionStructure = new QuestionStructure();
         questionStructure.setQuestion(question);
 
         Tree tree = LP.apply(words);
-        LOG.info("Sentiment tree: ");
-        tree.pennPrint();
+//        LOG.info("Sentiment tree: ");
+//        tree.pennPrint();
         questionStructure.setTree(tree);
 
         GrammaticalStructure gs = GSF.newGrammaticalStructure(tree);
         if (gs == null) {
             return null;
         }
+
         Collection<TypedDependency> tdls = gs.typedDependenciesCCprocessed(true);
         questionStructure.setTdls(tdls);
         Map<String, String> map = new HashMap<>();
@@ -59,10 +62,9 @@ public class MainPartExtracter {
 
         List<String> dependencies = new ArrayList<>();
         for(TypedDependency tdl : tdls) {
-            //TODO 处理依赖 转为string
             String item = tdl.toString();
             dependencies.add(item);
-            LOG.info("\t" + item);
+//            LOG.info("\t" + item);
             if (item.startsWith("top")) {
                 top = item;
             }
@@ -86,7 +88,6 @@ public class MainPartExtracter {
             }
         }
 
-        questionStructure.setDependencies(dependencies);
         String mainPartForTop = null;
         String mainPartForRoot = null;
         if (top != null) {
@@ -123,7 +124,8 @@ public class MainPartExtracter {
             return null;
         }
         String[] values = value.split(":");
-        if (values != null && values.length > 0) { //TODO 特殊情况处理 主谓结构
+        // 处理主谓
+        if (values != null && values.length > 0) {
             if (values.length > 1) {
                 first = values[0].split("-")[0];
                 third = values[values.length - 1].split("-")[0];
@@ -131,7 +133,7 @@ public class MainPartExtracter {
                 String k = values[0];
                 String t = k.split("-")[0];
                 int tIndex = Integer.parseInt(k.split("-")[1]);
-                if (secondIndex < tIndex) {
+                if (secondIndex < tIndex) {// 处理被动语态的情况?
                     //谓语 调整为 主语
                     first = second;
                     second = t;
@@ -189,12 +191,14 @@ public class MainPartExtracter {
         return mainPart;
     }
 
+    @Override
     public QuestionStructure getMainPart(String question) {
         question = question.replace("\\s+", "");
         String questionWords = questionParse(question);
         return getMainPart(question, questionWords);
     }
 
+    @Override
     public String getQuestionMainPartNaturePattern(String question, String mainPart) {
         Map<String, String> map = new HashMap<>();
 
@@ -227,11 +231,8 @@ public class MainPartExtracter {
 
     public static void main(String[] args) {
         MainPartExtracter mainPartExtracter = new MainPartExtracter();
-        QuestionStructure questionStructure = mainPartExtracter.getMainPart("勃学的创始人是谁");
-        LOG.info(questionStructure.getQuestion());
-        LOG.info(questionStructure.getMainPart());
-        for (String d : questionStructure.getDependencies()) {
-            LOG.info("\t" + d);
-        }
+        QuestionStructure questionStructure = mainPartExtracter.getMainPart("勃学的创始人是");
+        LOG.info("Question: "+ questionStructure.getQuestion());
+        LOG.info("MainPart: " + questionStructure.getMainPart());
     }
 }
