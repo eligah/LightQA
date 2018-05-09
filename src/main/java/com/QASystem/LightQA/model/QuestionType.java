@@ -5,22 +5,34 @@ public enum  QuestionType {
 
     public String getPos() {
         String pos = "unknown";
-
-        if (QuestionType.PERSON_NAME == this){
+        //nr 人名
+        if (QuestionType.PERSON_NAME == this) {
             pos = "nr";
         }
-        else if (QuestionType.LOCATION_NAME == this){
+        //ns 地名
+        if (QuestionType.LOCATION_NAME == this) {
             pos = "ns";
         }
-        else if (QuestionType.ORGANIZATION_NAME == this){
+        //nt 团体机构名
+        if (QuestionType.ORGANIZATION_NAME == this) {
             pos = "nt";
         }
-        else if (QuestionType.NUMBER == this){
+        //m=数词
+        //mh=中文数词
+        //mb=百分数词
+        //mf=分数词
+        //mx=小数词
+        //mq=数量词
+        if (QuestionType.NUMBER == this) {
             pos = "m";
         }
-        else if (QuestionType.TIME == this){
+        //t=时间词
+        //tq=时间量词
+        //tdq=日期量词
+        if (QuestionType.TIME == this) {
             pos = "t";
         }
+
         return pos;
     }
 

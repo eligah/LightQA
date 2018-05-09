@@ -3,6 +3,7 @@ package com.QASystem.LightQA.filter;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apdplat.word.recognition.StopWord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.QASystem.LightQA.model.*;
@@ -21,11 +22,16 @@ public class CandidateAnswerFilterInQuestion implements CandidateAnswerFilter{
         LOG.debug(str.toString());
         // Answer should not exist in the question.
         Iterator<CandidateAnswer> iterator = candidateAnswers.iterator();
-        while (iterator.hasNext()) {
+        while(iterator.hasNext()) {
             CandidateAnswer candidateAnswer = iterator.next();
-            if (questionWords.contains(candidateAnswer.getAnswer())) {
+            if(StopWord.is(candidateAnswer.getAnswer())) {
                 iterator.remove();
-                LOG.debug("remove the answer which word in the question: " + candidateAnswer.getAnswer());
+                LOG.debug("Word: " + candidateAnswer.getAnswer() + " is stopword. Should be removed");
+                continue;
+            }
+            if(questionWords.contains(candidateAnswer.getAnswer())) {
+                iterator.remove();
+                LOG.debug("Word: " + candidateAnswer.getAnswer() + " has already in question. Should be removed");
             }
         }
     }

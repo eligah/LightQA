@@ -34,6 +34,7 @@ public class CommonCandidateAnswerSelect implements CandidateAnswerSelect{
                 candidateAnswerCollection.addAnswer(answer);
                 LOG.debug("Become candidate answer: " + word);
             }
+
             // Deal with PERSON_NAME type
             else if (question.getQuestionType().getPos().equals("nr") && word.getPartOfSpeech() == PartOfSpeech.I) {
                 if (PersonName.is(word.getText())) {

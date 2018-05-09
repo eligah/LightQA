@@ -31,6 +31,7 @@ public class WordParser {
     }
 
     public static List<Word> parse(String str) {
+        str = str.replace(".", " ");
         List<Word> words = WordSegmenter.segWithStopWords(str, SegmentationAlgorithm.MaxNgramScore);
         PartOfSpeechTagging.process(words);
         return words;
@@ -43,7 +44,7 @@ public class WordParser {
     }
 
     public static void main(String[] args) {
-        List<Word> parse = parse("勃学的创始人是谁?");
+        List<Word> parse = parse("2017年7月9日 - 伟大的勃学创始人曾勃..许老师:清华能把我这种人招进来,便从一本降到了三本,同理我上的美西私立学校和公立学校也是三本,然而MIT不是三本,因为它在两个...");
         System.out.println(parse);
 //        parse = parseWithoutStopWords("布什是个什么样的人呀");
 //        System.out.println(parse);

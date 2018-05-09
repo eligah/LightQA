@@ -107,6 +107,6 @@ public class CommonQuestionAnsweringSystem extends QuestionAnsweringSystemImpl {
     }
     public static void main(String[] args) {
         QuestionAnsweringSystem questionAnsweringSystem = new CommonQuestionAnsweringSystem();
-        questionAnsweringSystem.answerQuestion("勃学的创始人是谁?");
+        questionAnsweringSystem.answerQuestion("华南理工大学占地面积多少?");
     }
 }

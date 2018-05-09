@@ -97,8 +97,8 @@ public class MainPartExtracterEX implements AbstractMainPartExtracter{
                      }
                  }
 
-                 combineNN(tdls, mainPart.getSubject());
-                 combineNN(tdls, mainPart.getObject());
+//                 combineNN(tdls, mainPart.getSubject());
+//                 combineNN(tdls, mainPart.getObject());
                  if(mainPart.isNotDone()){
                      mainPart.done();
                  }

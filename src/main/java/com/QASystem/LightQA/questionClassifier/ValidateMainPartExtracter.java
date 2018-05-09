@@ -82,6 +82,7 @@ public class ValidateMainPartExtracter {
             }
         }
 
+
         int total = right.size() + wrong.size() + yes.size() + no.size();
         LOG.info("SVO extraction statistic: ");
         LOG.info("Question set size: " + total);

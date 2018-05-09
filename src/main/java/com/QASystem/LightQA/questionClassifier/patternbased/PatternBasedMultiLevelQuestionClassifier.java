@@ -189,7 +189,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
                 if (line.length() == 0 || line.startsWith("//") || line.startsWith("#")) {
                     continue;
                 }
-                LOG.debug("Pattern" + (i++) + "：" + line);
+//                LOG.debug("Pattern" + (i++) + "：" + line);
                 String[] tokens = line.split("\\s+", 3);
                 types.add(tokens[0]);
                 questionTypesForSet.add(tokens[0]);
